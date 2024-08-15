@@ -1,0 +1,236 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+
+/* Font-face for Brush Script MT as it's not available on Google Fonts */
+@font-face {
+  font-family: 'Brush Script MT';
+  src: url('https://example.com/path/to/brush-script-mt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  background: url("https://avatars.mds.yandex.net/i?id=9263a28e544223191041b6892c59408e_l-9181172-images-thumbs&n=13") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+.invitation {
+  background: rgba(255, 244, 220, 0.9);
+  /* Soft warm beige with slight transparency */
+  border-radius: 15px;
+  padding: 5%;
+  max-width: 580px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #d1bca1;
+  /* Subtle warm border */
+  position: relative;
+}
+
+.invitation::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: url('https://example.com/path/to/decorative-bottom-pattern.png') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 15px 15px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #a45a1e;
+  /* Warm brown color for prominence */
+  margin-bottom: 15px;
+  font-family: 'Great Vibes', cursive;
+  /* Restored original font */
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-style: italic;
+  color: #6d4c41;
+  /* Slightly darker warm gray for contrast */
+  font-family: 'Playfair Display', serif;
+  /* Restored original font */
+}
+
+.details {
+  margin-bottom: 25px;
+}
+
+.details p {
+  font-size: 16px;
+  margin: 12px 0;
+  line-height: 1.4;
+  color: #7c5f4f;
+  /* Medium warm gray for readability */
+  font-family: 'Playfair Display', serif;
+  /* Restored original font */
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(185, 28, 46);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:active {
+  transform: scale(0.92);
+}
+
+.btn:hover {
+  background: rgb(2, 29, 78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.time {
+  background: #e23d28;
+  /* Red background for countdown */
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 22px;
+  width: 75px;
+  text-align: center;
+}
+
+.time span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+audio {
+  display: none;
+}
+
+.couple-names {
+  font-size: 24px;
+  color: #b5651d;
+  /* Warm brown for names */
+  margin-bottom: 15px;
+  font-family: 'Brush Script MT', cursive;
+  /* Restored original font */
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background: #b5651d;
+  /* Matching warm brown */
+  margin: 20px auto;
+  opacity: 0.5;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #d1bca1;
+  /* Subtle border */
+  font-size: 16px;
+  color: #888;
+  /* Light gray color for footer text */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer .signature {
+  font-family: 'Brush Script MT', cursive;
+  /* Restored original font */
+  font-size: 20px;
+  color: #e23d28;
+  /* Matching header color */
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .invitation {
+    padding: 20px;
+    max-width: calc(100% - 110px);
+    /* 55px space on each side */
+    width: calc(100% - 110px);
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .details p {
+    font-size: 14px;
+  }
+
+  .map-button {
+    display: block;
+    margin: 10px 0;
+    /* Reduce vertical margin */
+    width: 83%;
+    /* Full width of the container */
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .time {
+    margin: 5px;
+    /* Reduce margin between time elements */
+    font-size: 18px;
+    width: 65px;
+  }
+
+  .couple-names {
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  footer .signature {
+    font-size: 18px;
+  }
+}
